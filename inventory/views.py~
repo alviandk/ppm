@@ -16,7 +16,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published inventory."""
-        return Item.objects.order_by('-added_date')[:5]
+        return Item.objects.order_by('-pub_date')[:5]
 
 
 class DetailView(generic.DetailView):
