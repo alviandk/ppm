@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Location(models.Model):
     name = models.CharField(max_length=200)
     def __unicode__(self):              #  on Python 2
-        return self.question_text
+        return self.name
 
 class Item(models.Model):
     name = models.CharField(max_length=200)
@@ -16,4 +16,4 @@ class Item(models.Model):
     added_by = models.ForeignKey(User)
     added_date = models.DateTimeField(auto_now_add=True)
     def __unicode__(self):              #  on Python 2
-        return self.question_text
+        return self.name
